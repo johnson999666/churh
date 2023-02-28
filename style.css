@@ -9,17 +9,17 @@ body {
 }
 
 .flex-box {
-  width: 200%;
+  width: 125%;
   flex-basis: 30%;
   height: 200px;
-  background-color: #ccc;
-  margin: 10px;
+  
+  margin: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 10px;
   color: black;
-  background-color: rgba(255, 255, 255, 0.5);
+  
   height: 50vh;
 }
 
@@ -45,4 +45,8 @@ body {
 .stick img {
   width: 50px;
   height: 50px;
+}
+#a {
+  background-color: pink;
+  text-align: center;
 }
