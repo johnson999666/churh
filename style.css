@@ -1,0 +1,47 @@
+body {
+  background-image: url('clif.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 100px);
+}
+
+.flex-box {
+  width: 125%;
+  flex-basis: 30%;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stick {
+  position: sticky;
+  top: 0;
+}
+
+.flex-box iframe {
+  max-width: 90%;
+  max-height: 100%;
+}
+
+#flex2 {
+  width: 100%;
+  padding-left: 10px;
+}
+
+#flex1 {
+  width: 70%;
+  flex-grow: 1;
+}
+.stick img {
+  width: 50px;
+  height: 50px;
+}
