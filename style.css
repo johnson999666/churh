@@ -1,3 +1,11 @@
+.wrapper {
+  background-image: url("back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .flex-item {
   display: flex;
   flex-direction: column;
@@ -38,6 +46,7 @@ p {
 .button:hover {
   background-color: #0062cc;
 }
+
 .bible-study {
   background-color: #f9f9f9;
   border: 2px solid #ddd;
@@ -92,9 +101,11 @@ p {
 .bible-study form button:hover {
   background-color: #3e8e41;
 }
-header{
+
+header {
   position: fixed;
 }
+
 footer {
   background-color: #f8f8f8;
   padding: 40px 0;
@@ -117,15 +128,4 @@ footer a {
   color: #555;
 }
 
-footer a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-body {
-			background-image: url("back.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			background-attachment: fixed;
-		}
+footer
