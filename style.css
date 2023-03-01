@@ -4,25 +4,23 @@ body {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center; /* add this line */
   flex-wrap: wrap;
   grid-template-columns: repeat(4, 100px);
 }
 
 .flex-box {
-  width: 125%;
   flex-basis: 30%;
-  height: 100%;
-  
-  margin: 5%;
+  height: 75vh;
+  margin: 2%; /* decrease the margin */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   color: black;
-  
-  height: 75vh;
-  width: 100vh;
+  border: 1px solid black; /* add this line to show the boundaries of the flex-box */
 }
+
 
 .stick {
   position: sticky;
