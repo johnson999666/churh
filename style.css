@@ -17,11 +17,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
+  font-size: 20px;
   color: black;
   
-  height: 50vh;
-  width: 50vh;
+  height: 75vh;
+  width: 100vh;
 }
 
 .stick {
