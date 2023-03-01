@@ -128,4 +128,138 @@ footer a {
   color: #555;
 }
 
-footer
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0062cc;
+}
+
+.bible-study {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.bible-study p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form input[type="text"],
+.bible-study form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bible-study form button:hover {
+  background-color: #3e8e41;
+}
+
+header {
+  position: fixed;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
