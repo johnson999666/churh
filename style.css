@@ -37,15 +37,9 @@ body {
   max-height: 100%;
 }
 
-#flex2 {
-  width: 100%;
-  padding-left: 10px;
-}
 
-#flex1 {
-  width: 70%;
-  flex-grow: 1;
-}
+
+
 .stick img {
   width: 50px;
   height: 50px;
@@ -58,7 +52,4 @@ body {
   left: 0;
   width: 100%;
 }
-#helping {
-  max-width: 100%;
-  height: auto;
-}
+
