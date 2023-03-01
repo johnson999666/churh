@@ -7,10 +7,9 @@ body {
   justify-content: center; /* add this line */
   flex-wrap: wrap;
   grid-template-columns: repeat(4, 100px);
-  flex-direction: column;
 }
 
-.flex-box {
+.flex-item {
   flex-basis: 30%;
   height: 75vh;
   margin: 2%; /* decrease the margin */
@@ -19,7 +18,21 @@ body {
   align-items: center;
   font-size: 20px;
   color: black;
-  border: 1px solid black; /* add this line to show the boundaries of the flex-box */
+
+  padding-top: 30px;
+  
+}
+.flex-box {
+  padding-top: 100px;
+}
+#verse {
+  padding-bottom: 30px;
+}
+#video {
+  padding: 20px;
+}
+#picture {
+  padding: 20px;
 }
 
 
@@ -31,10 +44,7 @@ body {
 
 }
 
-.flex-box iframe {
-  max-width: 90%;
-  max-height: 100%;
-}
+
 
 
 
