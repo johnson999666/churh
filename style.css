@@ -92,3 +92,6 @@ p {
 .bible-study form button:hover {
   background-color: #3e8e41;
 }
+header{
+  position: fixed;
+}
