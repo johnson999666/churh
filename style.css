@@ -95,3 +95,30 @@ p {
 header{
   position: fixed;
 }
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
