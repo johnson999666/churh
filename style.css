@@ -38,3 +38,57 @@ p {
 .button:hover {
   background-color: #0062cc;
 }
+.bible-study {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.bible-study p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form input[type="text"],
+.bible-study form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bible-study form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bible-study form button:hover {
+  background-color: #3e8e41;
+}
