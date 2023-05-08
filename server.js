@@ -1,23 +1,13 @@
 const express = require('express');
-const mongoose = require('mongoose');
+
 const fetch = require('node-fetch');
 
-const uri = 'mongodb+srv://jamesmleppo:Raylewis@cluster0.yhm4odr.mongodb.net/test';
+
 
 const app = express();
 app.use(express.static('public'));
 
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
-const weatherSchema = new mongoose.Schema({
-  city: String,
-  temperature: Number,
-});
-
-const Weather = mongoose.model('Weather', weatherSchema);
 
 app.set('view engine', 'ejs');
 
