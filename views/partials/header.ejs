@@ -1,0 +1,76 @@
+<style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .dropdown-content {
+      position: absolute;
+      left: 0;
+      top: 50px;
+      background-color: #f9f9f9;
+      min-width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      padding: 0;
+    }
+  
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      white-space: nowrap;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  
+    header {
+      background-color: rgb(124, 181, 181);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      height: 50px;
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+  
+    #nav {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: rgb(124, 181, 181);
+      padding: 10px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    }
+  
+  </style>
+  
+  <header>
+    <div style="display: flex; align-items: center;">
+      <button onclick="toggleNav()" style="background: none; border: none; color: white; font-size: 26px; cursor: pointer;">&#9776;</button>
+      <a href="#" style="text-decoration: none; font-size: 20px; margin-left: 10px;">Home</a>
+    </div>
+    <nav id="nav">
+      <div class="dropdown">
+        <a href="#" style="text-decoration: none; color: white; display: block; margin-bottom: 10px;">Button 1</a>
+        
+      </div>
+      <a href="#" style="text-decoration: none; color: white; margin-bottom: 10px; display: block;">Button 2</a>
+      <a href="#" style="text-decoration: none; color: white; margin-bottom: 10px; display: block;">Button 3</a>
+      <a href="#" style="text-decoration: none; color: white; margin-bottom: 10px; display: block;">Button 4</a>
+    </nav>
+  </header>
+  
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('nav');
+      nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
