@@ -763,175 +763,37 @@ fetch(url)
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+<!-- Include jQuery UI stylesheet -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+
+<!-- Add the following script after including jQuery and jQuery UI -->
 <script>
   $(document).ready(function() {
     var cities = [
-  "New York",
-  "Los Angeles",
-  "Chicago",
-  "Houston",
-  "Phoenix",
-  "Philadelphia",
-  "San Antonio",
-  "San Diego",
-  "Dallas",
-  "San Jose",
-  "Austin",
-  "Fort Worth",
-  "Jacksonville",
-  "Columbus",
-  "San Francisco",
-  "Seattle",
-  "Denver",
-  "Washington",
-  "Boston",
-  "Nashville",
-  "Portland",
-  "Las Vegas",
-  "Atlanta",
-  "Miami",
-  "Kansas City",
-  "Charlotte",
-  "Indianapolis",
-  "Orlando",
-  "Baltimore",
-  "Louisville",
-  "Memphis",
-  "Milwaukee",
-  "Minneapolis",
-  "New Orleans",
-  "Oklahoma City",
-  "Omaha",
-  "Pittsburgh",
-  "Raleigh",
-  "Sacramento",
-  "Salt Lake City",
-  "San Jose",
-  "St. Louis",
-  "Tampa",
-  "Tucson",
-  "Albuquerque",
-  "Anaheim",
-  "Arlington",
-  "Aurora",
-  "Bakersfield",
-  "Baton Rouge",
-  "Birmingham",
-  "Boise",
-  "Bridgeport",
-  "Buffalo",
-  "Chandler",
-  "Chesapeake",
-  "Chula Vista",
-  "Cincinnati",
-  "Cleveland",
-  "Colorado Springs",
-  "Corpus Christi",
-  "Des Moines",
-  "Detroit",
-  "Durham",
-  "El Paso",
-  "Escondido",
-  "Fayetteville",
-  "Fontana",
-  "Fort Lauderdale",
-  "Fort Wayne",
-  "Fresno",
-  "Fullerton",
-  "Garden Grove",
-  "Garland",
-  "Gilbert",
-  "Glendale",
-  "Greensboro",
-  "Hialeah",
-  "Honolulu",
-  "Huntington Beach",
-  "Idaho Falls",
-  "Irvine",
-  "Irving",
-  "Jackson",
-  "Lancaster",
-  "Laredo",
-  "Lexington",
-  "Lincoln",
-  "Long Beach",
-  "Madison",
-  "McAllen",
-  "Mesquite",
-  "Modesto",
-  "Montgomery",
-  "Nampa",
-  "Nashua",
-  "New Haven",
-  "Newark",
-  "Norfolk",
-  "North Las Vegas",
-  "Norwalk",
-  "Oceanside",
-  "Odessa",
-  "Ontario",
-  "Orange",
-  "Oxnard",
-  "Palmdale",
-  "Pasadena",
-  "Paterson",
-  "Peoria",
-  "Pomona",
-  "Port St. Lucie",
-  "Providence",
-  "Rancho Cucamonga",
-  "Reno",
-  "Richmond",
-  "Riverside",
-  "Rochester",
-  "Rockford",
-  "Roseville",
-  "Round Rock",
-  "Salem",
-  "Salinas",
-  "Santa Ana",
-  "Santa Clara",
-  "Santa Clarita",
-  "Santa Rosa",
-  "Savannah",
-  "Scottsdale",
-  "Shreveport",
-  "Sioux Falls",
-  "Spokane",
-  "Springfield",
-  "St. Paul",
-  "St. Petersburg",
-  "Sterling Heights",
-  "Stockton",
-  "Syracuse",
-  "Tacoma",
-  "Tempe",
-  "Thornton",
-  "Toledo",
-  
+      "New York",
+      "Los Angeles",
+      "Chicago",
+      "Houston",
+      "Phoenix",
+      // add more cities here
+    ];
 
-    // add more cities here
-  ];
+    $("#city").autocomplete({
+      source: cities,
+      classes: {
+        "ui-autocomplete": "autocomplete-custom",
+      },
+    });
 
-  $("#city").autocomplete({
-    source: cities,
-    classes: {
-      "ui-autocomplete": "autocomplete-custom",
-    },
+    $(".autocomplete-custom").css("color", "black");
   });
-
-  $(".autocomplete-custom").css("color", "black");
-});
-
-
+</script>
 
   
-    console.log("jQuery version: " + $.fn.jquery);
-    console.log("jQuery UI version: " + $.ui.version);
-    
-    // Autocomplete code here
- 
-  </script>
+   
    <h1>Post a Message</h1>
    <div class="container">
      <form>
