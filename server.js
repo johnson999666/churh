@@ -17,7 +17,8 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.use(express.static('public', { 
+// Serve static files with correct MIME types
+app.use(express.static('public', {
   setHeaders: function(res, path) {
     if (path.endsWith('.js')) {
       res.setHeader('Content-Type', 'text/javascript');
@@ -26,7 +27,6 @@ app.use(express.static('public', {
     }
   }
 }));
-
 
 // Start the server
 const port = process.env.PORT || 3000;
