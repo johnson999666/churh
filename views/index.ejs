@@ -221,11 +221,12 @@ fetch(url)
    
   <style>
     .change-color {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 400px;
-    }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* change the height to 200px */
+}
+
   
     .abc {
       height: 500px;
@@ -244,24 +245,25 @@ fetch(url)
   
   <script>
     const changeColorDiv = document.querySelector('.change-color');
-    let isPastChangeColorDiv = false;
-  
-    window.addEventListener('scroll', function() {
-      const body = document.querySelector('body');
-      const scrollY = window.scrollY;
-  
-      // Check if user has scrolled past the changeColorDiv
-      if (!isPastChangeColorDiv && scrollY > changeColorDiv.offsetTop + changeColorDiv.offsetHeight) {
-        isPastChangeColorDiv = true;
-        body.style.backgroundColor = 'rgb(124, 181, 181)';
-      }
-  
-      // Check if user has scrolled back up past the changeColorDiv
-      if (isPastChangeColorDiv && scrollY <= changeColorDiv.offsetTop) {
-        isPastChangeColorDiv = false;
-        body.style.backgroundColor = '#fff';
-      }
-    });
+let isPastChangeColorDiv = false;
+
+window.addEventListener('scroll', function() {
+  const body = document.querySelector('body');
+  const scrollY = window.scrollY;
+
+  // Check if user has scrolled past the changeColorDiv
+  if (!isPastChangeColorDiv && scrollY > changeColorDiv.offsetTop + 100) { /* change the offsetTop value to 200 */
+    isPastChangeColorDiv = true;
+    body.style.backgroundColor = 'rgb(124, 181, 181)';
+  }
+
+  // Check if user has scrolled back up past the changeColorDiv
+  if (isPastChangeColorDiv && scrollY <= changeColorDiv.offsetTop) {
+    isPastChangeColorDiv = false;
+    body.style.backgroundColor = '#fff';
+  }
+});
+
   </script>
   
   <body style="position: relative; min-height: 100vh; margin: 0;">
