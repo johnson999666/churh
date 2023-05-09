@@ -544,6 +544,22 @@ li {
 button {
   margin: 5px;
 }
+#colors {
+  background-color: white;
+  
+  background: linear-gradient(to right,  rgb(124, 181, 181), rgb(205, 177, 131));
+             -webkit-background-clip: text;
+             -moz-background-clip: text;
+             background-clip: text;
+ 
+ }
+ 
+ #colors {
+   
+   background: linear-gradient(to right, rgb(124, 181, 181), rgb(205, 177, 131));
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   background-clip: text;
+   color: transparent;
 
-
-
+ }

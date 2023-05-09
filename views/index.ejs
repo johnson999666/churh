@@ -5,7 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">My Website</a>
+        <!-- Hamburger menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">React.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">Skills</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <style>
+    /* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styles */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+}
+
+/* Hamburger menu styles */
+.navbar-toggler {
+  border: none;
+}
+
+/* Links styles */
+.navbar-nav {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-link {
+  color: #000;
+  margin-left: 25px;
+  margin-right: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+  </style>
 
 
    
@@ -165,11 +235,11 @@ fetch(url)
 
   <div class="container">
     <div class="box">
-      <h2>React.js</h2>
+      <h2 id="section1">React.js</h2>
       React.js is a popular JavaScript library used for building dynamic and interactive user interfaces. It allows developers to create reusable UI components and efficiently manage application state. React.js also enables the creation of mobile apps using React Native. With its strong community and vast ecosystem of supporting tools and libraries, React.js has become a go-to choice for front-end development.
     </div>
     <div class="box">
-      <h2>JavaScript</h2>
+      <h2  id="section2">JavaScript</h2>
         JavaScript is a widely used programming language for building interactive web applications. It can be used to create dynamic effects on web pages, validate user input, and handle browser events. JavaScript also has the ability to interact with HTML and CSS, making it a powerful tool for creating interactive and engaging web content. JavaScript is a critical skill for web developers today.
     </div>
   </div>
@@ -232,14 +302,12 @@ fetch(url)
         font-size: 1.5em;
         
       }
-   
-
-  
- 
-  
-    
   </style>
- <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f2f2f2; padding: 20px; margin: 20px 0; font-size: 16px; line-height: 1.5;">
+
+
+
+
+ <div id="section3" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f2f2f2; padding: 20px; margin: 20px 0; font-size: 16px; line-height: 1.5;">
 
   <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Web Design Skills</h2>
 
@@ -257,10 +325,12 @@ fetch(url)
 </div>
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; transform: translateY(-200px); ">
-    <h1 class="oo" style="text-shadow: none; color: black; padding-top: 400px; margin: 0 auto; font-size: 3em; max-width: 80%;">Contact me Below</h1>
-    
-    
+    <h1 class="oo" style="text-shadow: none; color: black; padding-top: 400px; margin: 0 auto; font-size: 3em; max-width: 80%;"><span id="colors">Contact</span> me Below</h1>
   </div>
+  <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <img src="threeD.png" alt="Your Image" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+  
     
   </body>
   <%- include('partials/footer') %>
@@ -269,7 +339,7 @@ fetch(url)
   
   
   
-</body>
+
 
 
 
