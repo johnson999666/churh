@@ -545,8 +545,5 @@ button {
   margin: 5px;
 }
 
-@media (max-width: 480px) {
-  .change-color {
-    height: 100px;
-  }
-}
+
+
