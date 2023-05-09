@@ -50,17 +50,28 @@
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
     }
   
+    #home-bar {
+      display: flex;
+      align-items: center;
+    }
+  
+    #home-bar a {
+      text-decoration: none;
+      font-size: 20px;
+      margin-left: 10px;
+      color: white;
+    }
   </style>
   
   <header>
-    <div style="display: flex; align-items: center;">
-      <button onclick="toggleNav()" style="background: none; border: none; color: white; font-size: 26px; cursor: pointer;">&#9776;</button>
-      <a href="#" style="text-decoration: none; font-size: 20px; margin-left: 10px;">Home</a>
+    <div id="home-bar">
+      <a href="#">Home</a>
     </div>
+    <button onclick="toggleNav()" style="background: none; border: none; color: white; font-size: 26px; cursor: pointer;">&#9776;</button>
     <nav id="nav">
       <div class="dropdown">
         <a href="#" style="text-decoration: none; color: white; display: block; margin-bottom: 10px;">Button 1</a>
-        
+  
       </div>
       <a href="#" style="text-decoration: none; color: white; margin-bottom: 10px; display: block;">Button 2</a>
       <a href="#" style="text-decoration: none; color: white; margin-bottom: 10px; display: block;">Button 3</a>
@@ -74,3 +85,4 @@
       nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
     }
   </script>
+  
