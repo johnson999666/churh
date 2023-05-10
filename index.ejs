@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+
+
+   
+
+    
+    <title>Web Dev</title>
+
+
+    
+    <%- include('partials/header') %>
+      
+  </head>
+  <body>
+   
+
+<style>     
+  h1 {
+    margin-top: 100px;
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+
+</style>
+
+<h1>Responsive Web Design Journey</h1>
+
+<div class="ab zz" >
+  <div class="contain">
+    <div class="flexb">
+      <img class="mother" src="/me.jpg" alt="Your Image">
+    </div>
+    <div class="flexb m">
+      <p>As a web developer, I specialize in designing, building, and maintaining websites. I use programming languages such as HTML, CSS, and JavaScript to create dynamic and responsive websites. My goal is to create visually appealing and user-friendly websites that are optimized for performance and search engine visibility. I stay up-to-date with the latest trends and technologies in the field to ensure that my skills and knowledge are always current.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="title2" style="display: flex; justify-content: center;">
+  <h1 class="title3 center">Live Weather Forecast API</h1>
+</div>
+
+<div class="shadow-box" style="display: flex; justify-content: center;">
+  <div class="title2" style="display: flex; flex-direction: column; align-items: center;">
+    <form id="weather-form" autocomplete="off" style="padding: 10px;">
+      <input type="text" id="city" name="city" placeholder="Enter a city name" style="margin-right: 5px;">
+      <button type="submit" style="background-color: rgb(124, 181, 181); color: white; padding: 5px 10px; border: none; border-radius: 5px;">Get Weather</button>
+    </form>
+    <ul id="suggestion-list"></ul>
+    <div id="weather-info"></div>
+  </div>
+</div>
+<script>
+ const form = document.querySelector("#weather-form");
+const input = document.querySelector("#city");
+const suggestionList = document.querySelector("#suggestion-list");
+const weatherInfo = document.querySelector("#weather-info");
+
+const apiKey = "c740b141159dc93d62c32a163b009d37";
+
+form.addEventListener("submit", (e) => {
+e.preventDefault();
+const city = input.value.trim(); // declare the city variable
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    const cityName = data.name;
+    const weatherDescription = data.weather[0].description;
+    const temperature = data.main.temp;
+
+    const resultHtml = `
+      <p>The current temperature in ${cityName} is ${temperature} degrees Celsius, with ${weatherDescription}.</p>
+    `;
+
+    weatherInfo.innerHTML = resultHtml;
+  })
+  .catch((error) => {
+    console.error("Error fetching weather data:", error);
+    weatherInfo.innerHTML = "<p>Error fetching weather data. Please try again.</p>";
+  });
+});
+
+
+</script>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+<!-- Include jQuery UI stylesheet -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+
+<!-- Add the following script after including jQuery and jQuery UI -->
+<script>
+  $(document).ready(function() {
+    var cities = [
+      "New York",
+      "Los Angeles",
+      "Chicago",
+      "Houston",
+      "Phoenix",
+      // add more cities here
+    ];
+
+    $("#city").autocomplete({
+      source: cities,
+      classes: {
+        "ui-autocomplete": "autocomplete-custom",
+      },
+    });
+
+    $(".autocomplete-custom").css("color", "black");
+  });
+</script>
+
+  
+   
+   <h1>Post a Message</h1>
+   <div class="container">
+     <form>
+       <label for="message">Leave a message:</label>
+       <textarea id="message" name="message" rows="5"></textarea>
+       <button class="button" type="button" onclick="postMessage()">Post</button>
+     </form>
+     <ul id="messages"></ul>
+   </div>
+   
+   <script>
+     function postMessage() {
+       var messageInput = document.getElementById("message");
+       var message = messageInput.value;
+       if (message === "") {
+         alert("Please enter a message.");
+         return;
+       }
+       var messageList = document.getElementById("messages");
+       var messageItem = document.createElement("li");
+       messageItem.innerHTML = message;
+       messageList.appendChild(messageItem);
+       messageInput.value = "";
+     }
+   </script>
+
+
+  <div class="container">
+    <div class="box">
+      <h2 id="section1">React.js</h2>
+      React.js is a popular JavaScript library used for building dynamic and interactive user interfaces. It allows developers to create reusable UI components and efficiently manage application state. React.js also enables the creation of mobile apps using React Native. With its strong community and vast ecosystem of supporting tools and libraries, React.js has become a go-to choice for front-end development.
+    </div>
+    <div class="box">
+      <h2  id="section2">JavaScript</h2>
+        JavaScript is a widely used programming language for building interactive web applications. It can be used to create dynamic effects on web pages, validate user input, and handle browser events. JavaScript also has the ability to interact with HTML and CSS, making it a powerful tool for creating interactive and engaging web content. JavaScript is a critical skill for web developers today.
+    </div>
+  </div>
+  
+  
+ 
+ 
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; transform: translateY(-200px);">
+    <h1 class="oo" style="text-shadow: none; color: white; padding-top: 800px; margin: 0 auto; font-size: 3em; max-width: 80%;">Web Design is Always Exciting</h1>
+    <div class="uu" style="width: 100%; margin: 0 auto; font-size: 2em; color: white;">There is always some new to find</div>
+    
+  </div>
+
+  
+ 
+  
+  <style type="text/css">
+    body {
+      background-color: white;
+      transition: background-color 0.5s ease-in-out;
+      height: 5000px;
+    }
+    body.scroll {
+      background-color: rgb(124, 181, 181);
+    }
+    #myDiv {
+      width: 100%;
+      height: 1200px;
+      transform: translateY(1100px);
+      
+    }
+    
+  </style>
+  <body>
+	
+ 
+  <div id="myDiv"></div>
+  </body>
+  <script type="text/javascript">
+    var myDiv = document.getElementById("myDiv");
+    var body = document.querySelector('body');
+    var ticking = false;
+    var divPosition = myDiv.getBoundingClientRect();
+    
+    function updateBackground() {
+      var scrollPosition = window.scrollY;
+      if (scrollPosition >= divPosition.top && scrollPosition <= divPosition.bottom) {
+        body.classList.add('scroll');
+      } else {
+        body.classList.remove('scroll');
+      }
+      ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateBackground();
+        });
+        ticking = true;
+      }
+    });
+  </script>
+
+  
+	
+  <style>
+    @media (max-width: 768px) {
+      .oo {
+        font-size: 2em;
+        
+
+}
+
+      }
+      .uu {
+        font-size: 1.5em;
+        
+      }
+  </style>
+
+
+
+
+ <div id="section3" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f2f2f2; padding: 20px; margin: 20px 0; font-size: 16px; line-height: 1.5;">
+
+  <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Web Design Skills</h2>
+
+  <ul style="list-style-type: disc; text-align: left; margin-left: 30px;">
+    <li>Proficient in HTML, CSS, and JavaScript, with the ability to write clean and maintainable code for complex web applications.</li>
+    <li>Strong understanding of responsive design principles, including the use of media queries and flexible grid systems, to ensure websites display optimally across all devices and screen sizes.</li>
+    <li>Experience with CSS frameworks such as Bootstrap and Materialize, including the use of pre-built components and custom styling, to streamline web development workflows.</li>
+    <li>Ability to create visually appealing designs using Adobe Photoshop and Illustrator, with a strong sense of typography, color theory, and layout design principles.</li>
+    <li>Familiarity with UI/UX design principles and tools such as Sketch and Figma, including wireframing, prototyping, and user testing, to create intuitive and engaging user experiences.</li>
+    <li>Knowledge of web accessibility guidelines and best practices, including the use of ARIA attributes and semantic HTML markup, to ensure websites are accessible to all users, regardless of their abilities or disabilities.</li>
+    <li>Understanding of SEO and its impact on web design and development, including the use of meta tags, semantic markup, and keyword research, to improve website visibility and search engine rankings.</li>
+    <li>Experience with version control systems like Git, including the use of branches, merges, and pull requests, to collaborate effectively with other developers and manage code changes across projects.</li>
+  </ul>
+
+</div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; transform: translateY(-200px); ">
+    <h1 class="oo" style="text-shadow: none; color: black; padding-top: 400px; margin: 0 auto; font-size: 3em; max-width: 80%;"><span id="colors">Contact</span> me Below</h1>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <img src="threeD.png" alt="Your Image" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+  
+    
+ 
+  <%- include('partials/footer') %>
+  
+  
+  
+  
+  
+
+
+
+
+
+
+    
+  
+    <script src="/public/js/main.js"></script>
+  </body>
+  
+  
+</html>
+
+
+
