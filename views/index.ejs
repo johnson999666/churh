@@ -9,7 +9,6 @@
 
 
 
-
    
 
     
@@ -193,32 +192,49 @@ fetch(url)
     body {
       background-color: white;
       transition: background-color 0.5s ease-in-out;
+      height: 5000px;
     }
     body.scroll {
       background-color: rgb(124, 181, 181);
     }
     #myDiv {
       width: 100%;
-      height: 700px;
-      transform: translateY(1700px);
+      height: 1000px;
+      transform: translateY(1100px);
     }
     
   </style>
-  <div id="myDiv"></div>
+  <body>
+	
  
+  <div id="myDiv"></div>
+  </body>
   <script type="text/javascript">
     var myDiv = document.getElementById("myDiv");
-    window.addEventListener('scroll', function() {
-      var body = document.querySelector('body');
+    var body = document.querySelector('body');
+    var ticking = false;
+    var divPosition = myDiv.getBoundingClientRect();
+    
+    function updateBackground() {
       var scrollPosition = window.scrollY;
-      var divPosition = myDiv.getBoundingClientRect();
       if (scrollPosition >= divPosition.top && scrollPosition <= divPosition.bottom) {
         body.classList.add('scroll');
       } else {
         body.classList.remove('scroll');
       }
+      ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateBackground();
+        });
+        ticking = true;
+      }
     });
   </script>
+
   
 	
   <style>
@@ -264,7 +280,7 @@ fetch(url)
   </div>
   
     
-  </body>
+ 
   <%- include('partials/footer') %>
   
   
