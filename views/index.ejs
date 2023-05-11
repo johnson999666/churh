@@ -9,7 +9,6 @@
 
 
 
-
    
 
     
@@ -17,69 +16,7 @@
 
 
     
-    
-
-<div class="header">
-  
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-   
-  </div>
-</div>
-
-<style>
-/* Style the header with a grey background and some padding */
-.header {
-  overflow: hidden;
-  background-color: rgb(124, 181, 181);
-  padding: 20px 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99999; /* Set a higher z-index to bring the header to the front */
-}
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 10px;
-  border-radius: 4px;
-  
-}
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: rgb(124, 181, 181);
-  color: black;
-}
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: black;
-  margin-right: 35px;
-}
-
-/* Float the link section to the right */
-.header-right {
-  float: right;
-}
-
-
-
-</style>
-
+    <%- include('partials/header') %>
       
   </head>
   <body>
@@ -239,48 +176,81 @@ fetch(url)
   </div>
   
   
- 
- 
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; transform: translateY(-200px);">
-    <h1 class="oo" style="text-shadow: none; color: white; padding-top: 800px; margin: 0 auto; font-size: 3em; max-width: 80%;">Web Design is Always Exciting</h1>
-    <div class="uu" style="width: 100%; margin: 0 auto; font-size: 2em; color: white;">There is always some new to find</div>
-    
-  </div>
-
-  
- 
-  
-  <style type="text/css">
+  <style>
     body {
-      background-color: white;
-      transition: background-color 0.5s ease-in-out;
-    }
-    body.scroll {
-      background-color: rgb(124, 181, 181);
-    }
-    #myDiv {
-      width: 100%;
-      height: 700px;
-      transform: translateY(1700px);
+      transition: background-color .5s ease-in-out;
     }
     
+    section {
+      height: 50vh;
+    }
+    .mid {
+      height: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .whitew {
+  font-size: 4em; /* Adjust the font size as per your preference */
+  color: white;
+  text-shadow: none;
+}
+
+
+
   </style>
-  <div id="myDiv"></div>
- 
-  <script type="text/javascript">
-    var myDiv = document.getElementById("myDiv");
-    window.addEventListener('scroll', function() {
-      var body = document.querySelector('body');
-      var scrollPosition = window.scrollY;
-      var divPosition = myDiv.getBoundingClientRect();
-      if (scrollPosition >= divPosition.top && scrollPosition <= divPosition.bottom) {
-        body.classList.add('scroll');
-      } else {
-        body.classList.remove('scroll');
-      }
+  
+  <section data-color="white"></section>
+  <section data-color="white"></section>
+  <section data-color="rgb(124, 181, 181)" class="mid">
+    <h1 class="whitew"> Web Design is Always Exciting</h1>
+    <div class="uu" style="width: 100%; text-align: center; font-size: 2em; color: white;">There is always some new to find</div>
+    
+  
+  
+  </section>
+  <section data-color="white"></section>
+  <section data-color="white"></section>
+  <section data-color="white"></section>
+  
+  <script>
+    const sections = document.querySelectorAll('section');
+  
+    document.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        if(section.getBoundingClientRect().top <= window.innerHeight / 2) {
+          document.body.style.background = section.dataset.color;
+        }
+      });
     });
   </script>
+  
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
   
 	
   <style>
@@ -326,25 +296,8 @@ fetch(url)
   </div>
   
     
-  </body>
-  <footer style="
-  background-color: rgb(124, 181, 181);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 26px;
-">
-  <a href="mailto:jamesmleppo@gmail.com" style="color: white; text-decoration: underline;">
-    jamesmleppo@gmail.com
-  </a>
-</footer>
-
+ 
+  <%- include('partials/footer') %>
   
   
   
@@ -363,3 +316,6 @@ fetch(url)
   
   
 </html>
+
+
+
